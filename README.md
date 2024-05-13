@@ -1,7 +1,9 @@
 # Building and deploying a containerized Streamlit app on AdaLab
 This repository contains files and folders that define a Streamlit app (`pages/`, `utils/`, `0_🏡_Main page.py`, and `start_app.sh`) and a Containerfile (`Containerfile`) that specifies the build steps to build a container image for the Streamlit app. This README also contains instructions for building and deploying the Streamlit app in version 1.3.x of [AdaLab](https://adamatics.com/index.php/platform-2/).
 
-To view the videos, open this README in GitHub at: [https://github.com/adamatics/containerize-streamlit-app](https://github.com/adamatics/containerize-streamlit-app).
+This README can also be viewed in GitHub at: [https://github.com/adamatics/containerize-streamlit-app](https://github.com/adamatics/containerize-streamlit-app).
+
+Download the instruction videos to watch them, there are links under the paragraph in which they are referred to.
 
 ## Template for an advanced Streamlit app
 
@@ -37,11 +39,16 @@ Then, from the terminal, build the container image with the below command:
 
 The argument `-t my-app:0.1.0` specifies the name and tag to use for the built container image, and you can specify it as you wish. The only requirement is that a container image with this name does not already exist in your Lab and that the name follows the [Open Container Initiative (OCI) naming convention](https://github.com/containers/image/blob/main/docker/reference/regexp.go). The build process will look as shown below if you have built this image before. Otherwise, there will be some more steps in which the various components need to be downloaded to the local compute resource.
 
+![Container image build process in the terminal](videos/containerize_streamlit_app-2024-05-13_14.14.47.webm)
+
 # Make the container image available in your organization
 Once the image building process is complete, you will have the container image available in your Lab on AdaLab. 
 
 To share the container image with colleagues and make it available for app deployment, head over to the AdaLab menu and select the menu item "Container Images". Then click the "Publish New" button found to the right of the text "Container Images". Follow the steps in the wizard that pops up, choosing "App" as the Container Image Type in the first step and "Lab" as the source of the container image in the second step. In the third step, specify the unique name and version combination for the container image. In the fourth step, type in a human-friendly name and description for the container image and then click the "Publish" button. When the publishing process has finalized, click the "Refresh" button to make the options for published container images available.
 
+![Publish the container image for the app](videos/publish_streamlit_app_container-2024-05-13_14.28.18)
+
 # Deploy your Streamlit app
 To deploy your containerized Streamlit app, click "Deploy app" in the triple-dot menu on the right-hand side for the container image entry on the "Container Images" page. Fill out the fields with a name and description for the app and click the "Deploy App" button. You can view the logs for the deployment, and once the deployment has finished, go to the app by clicking the link for the app on the "App Deployment" page to which you are routed after clicking the "Deploy App" button. This process is shown below:
 
+![Deploy the app](videos/deploy_streamlit_app-2024-05-13_14.42.03)
