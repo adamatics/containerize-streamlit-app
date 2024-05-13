@@ -29,7 +29,7 @@ In the following sections, we describe the steps required to deploy a Streamlit 
 # Build the container image
 First, open a terminal, e.g. by going to your Lab, and make sure that the directory you are in is the folder that the repository was cloned into. You can check this by listing the files in your current directory with the command `ls` and making sure that you are seeing the expected files, as shown below:
 
-
+<video src="videos/ls_in_terminal-2024-05-13_14.20.10.webm" width="300" />
 
 Then, from the terminal, build the container image with the below command:
 
